@@ -73,6 +73,16 @@ unsigned int ByteBuffer::bytesRemaining() {
 }
 
 /**
+ * Indicates if there are elements remaining in this buffer
+ * that is if  rpos < size()
+ *
+ * @return  if there are elements remaining in this buffer or not
+ */
+bool ByteBuffer::hasRemaining() {
+	return rpos < size();
+}
+
+/**
  * Clear
  * Clears out all data from the internal vector (original preallocated size remains), resets the positions to 0
  */
